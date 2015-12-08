@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "ReactJS Powered Presentation Framework",
   "main": "lib/index.js",
-  "jsnext:main": "src/index.js",
   "scripts": {
     "clean": "rimraf dist",
     "build": "NODE_ENV=production webpack --config webpack.config.production.js",
@@ -17,7 +16,7 @@
     "normalize.css": "3.0.3",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
-    "spectacle": "^1.0.0-rc7"
+    "spectacle": "^1.0.0"
   },
   "devDependencies": {
     "autoprefixer-core": "^6.0.1",

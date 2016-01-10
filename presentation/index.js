@@ -7,6 +7,7 @@ import {
   Appear,
   BlockQuote,
   Cite,
+  Code,
   CodePane,
   Deck,
   Fill,

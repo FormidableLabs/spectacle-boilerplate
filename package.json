@@ -6,7 +6,7 @@
   "scripts": {
     "clean": "rimraf dist",
     "build": "NODE_ENV=production webpack --config webpack.config.production.js",
-    "lint": "eslint --ext .js,.jsx src",
+    "lint": "eslint --ext .js,.jsx .",
     "deploy": "npm run clean & npm run build && surge -p .",
     "start": "node server.js"
   },

@@ -1,13 +1,11 @@
 // Import React
 import React from "react";
-import { render } from "react-dom";
 
 // Import Spectacle Core tags
 import {
   Appear,
   BlockQuote,
   Cite,
-  Code,
   CodePane,
   Deck,
   Fill,
@@ -169,6 +167,6 @@ You can write inline images, [Markdown Links](http://commonmark.org), paragraph 
           </Slide>
         </Deck>
       </Spectacle>
-    )
+    );
   }
 }

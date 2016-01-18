@@ -11,7 +11,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, "dist"),
     filename: "bundle.js",
-    publicPath: '/dist/'
+    publicPath: "/dist/"
   },
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(),
@@ -29,11 +29,11 @@ module.exports = {
   module: {
     loaders: [{ 
       test: /\.md$/,
-      loader: 'html-loader!markdown-loader?gfm=false'
+      loader: "html-loader!markdown-loader?gfm=false"
     }, {
       test: /\.(js|jsx)$/,
       exclude: /node_modules/,
-      loader: 'babel-loader'
+      loader: "babel-loader"
     }, {
       test: /\.css$/,
       loader: "style-loader!css-loader"

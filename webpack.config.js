@@ -6,9 +6,9 @@ var webpack = require('webpack');
 module.exports = {
   devtool: 'source-map',
   entry: [
-    'webpack-hot-middleware/client',
-    'babel-core/polyfill',
-    './index'
+  'webpack-hot-middleware/client',
+  'babel-polyfill',
+  './index'
   ],
   output: {
     path: path.join(__dirname, 'dist'),
@@ -16,30 +16,17 @@ module.exports = {
     publicPath: '/dist/'
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin()
+  new webpack.HotModuleReplacementPlugin(),
+  new webpack.NoErrorsPlugin()
   ],
   module: {
-    loaders: [{
-      test: /\.js$/,
-      loader: 'babel',
-      query: {
-        plugins: ['react-transform'],
-        extra: {
-          'react-transform': {
-            transforms: [{
-              transform: 'react-transform-hmr',
-              imports: ['react'],
-              locals: ['module']
-            }, {
-              transform: 'react-transform-catch-errors',
-              imports: ['react', 'redbox-react']
-            }]
-          }
-        }
-      },
+    loaders: [{ 
+      test: /\.md$/,
+      loader: 'html-loader!markdown-loader?gfm=false'
+    }, {
+      test: /\.(js|jsx)$/,
       exclude: /node_modules/,
-      include: __dirname
+      loader: 'babel-loader'
     }, {
       test: /\.css$/,
       loaders: ['style', 'raw'],

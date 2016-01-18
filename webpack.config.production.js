@@ -5,7 +5,7 @@ var webpack = require("webpack");
 
 module.exports = {
   entry: [
-    "babel-core/polyfill",
+    "babel-polyfill",
     "./index"
   ],
   output: {
@@ -27,10 +27,13 @@ module.exports = {
     })
   ],
   module: {
-    loaders: [{
-      test: /\.js$/,
+    loaders: [{ 
+      test: /\.md$/,
+      loader: 'html-loader!markdown-loader?gfm=false'
+    }, {
+      test: /\.(js|jsx)$/,
       exclude: /node_modules/,
-      loader: "babel"
+      loader: 'babel-loader'
     }, {
       test: /\.css$/,
       loader: "style-loader!css-loader"

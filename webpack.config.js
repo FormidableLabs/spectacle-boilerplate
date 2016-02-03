@@ -6,9 +6,9 @@ var webpack = require("webpack");
 module.exports = {
   devtool: "source-map",
   entry: [
-  "webpack-hot-middleware/client",
-  "babel-polyfill",
-  "./index"
+    "webpack-hot-middleware/client",
+    "babel-polyfill",
+    "./index"
   ],
   output: {
     path: path.join(__dirname, "dist"),
@@ -16,8 +16,8 @@ module.exports = {
     publicPath: "/dist/"
   },
   plugins: [
-  new webpack.HotModuleReplacementPlugin(),
-  new webpack.NoErrorsPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoErrorsPlugin()
   ],
   module: {
     loaders: [{ 

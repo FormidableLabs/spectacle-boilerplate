@@ -7,5 +7,5 @@
   "max-len": 0
 
 "env":
-    "browser": true,
-    "node": true
+  "browser": true,
+  "node": true

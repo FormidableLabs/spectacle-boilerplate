@@ -20,7 +20,7 @@ module.exports = {
     new webpack.NoErrorsPlugin()
   ],
   module: {
-    loaders: [{ 
+    loaders: [{
       test: /\.md$/,
       loader: "html-loader!markdown-loader?gfm=false"
     }, {
@@ -38,6 +38,10 @@ module.exports = {
     }, {
       test: /\.png$/,
       loader: "url-loader?mimetype=image/png",
+      include: path.join(__dirname, "assets")
+    }, {
+      test: /\.gif$/,
+      loader: "url-loader?mimetype=image/gif",
       include: path.join(__dirname, "assets")
     }, {
       test: /\.jpg$/,

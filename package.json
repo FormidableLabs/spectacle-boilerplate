@@ -5,10 +5,10 @@
   "main": "lib/index.js",
   "scripts": {
     "clean": "rimraf dist",
-    "build": "NODE_ENV=production webpack --config webpack.config.production.js",
+    "build": "cross-env NODE_ENV=production webpack --config webpack.config.production.js",
     "lint": "eslint --ext .js,.jsx .",
     "deploy": "npm run clean & npm run build && surge -p .",
-    "start": "NODE_ENV=development node server.js"
+    "start": "cross-env NODE_ENV=development node server.js"
   },
   "author": "",
   "license": "MIT",
@@ -28,6 +28,7 @@
     "babel-preset-react": "^6.3.13",
     "babel-preset-react-hmre": "^1.0.1",
     "babel-preset-stage-0": "^6.3.13",
+    "cross-env": "^1.0.7",
     "css-loader": "^0.23.0",
     "eslint": "^1.8.0",
     "eslint-config-defaults": "^7.1.1",

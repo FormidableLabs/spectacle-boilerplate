@@ -28,7 +28,18 @@ module.exports = {
       exclude: /node_modules/,
       loader: "babel-loader",
       query: {
-        presets: ['es2015', 'react']
+        presets:['react', 'es2015'],
+        env: {
+          development: {
+            plugins: [["react-transform", {
+              transforms: [{
+                transform: "react-transform-hmr",
+                imports: ["react"],
+                locals: ["module"]
+              }]
+            }]]
+          }
+        }
       }
     }, {
       test: /\.css$/,

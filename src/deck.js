@@ -1,4 +1,4 @@
-return (
+export default `return (
   <Deck transition={['zoom','slide']} transitionDuration={800}>
     <Slide bgColor="primary">
       <Heading size={1} fit caps>
@@ -25,4 +25,4 @@ return (
       </List>
     </Slide>
   </Deck>
-)
+)`;

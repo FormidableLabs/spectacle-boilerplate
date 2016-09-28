@@ -29,7 +29,7 @@ import preloader from "spectacle/lib/utils/preloader";
 import createTheme from "spectacle/lib/themes/default";
 
 // Import custom component
-import Interactive from "../assets/interactive";
+import Interactive from "./Interactive";
 
 // Require CSS
 require("normalize.css");
@@ -76,11 +76,11 @@ export default class Presentation extends React.Component {
             </Heading>
           </Slide>
           <Slide transition={["zoom", "fade"]} bgColor="primary" notes="<ul><li>talk about that</li><li>and that</li></ul>">
-            <CodePane
+            {<CodePane
               lang="jsx"
-              source={require("raw!../assets/deck.example")}
+              source={require("./deck.js").default}
               margin="20px auto"
-            />
+            />}
           </Slide>
           <Slide transition={["slide"]} bgImage={images.city.replace("/", "")} bgDarken={0.75}>
             <Appear fid="1">

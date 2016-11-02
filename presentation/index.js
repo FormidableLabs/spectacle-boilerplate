@@ -48,10 +48,11 @@ preloader(images);
 const theme = createTheme({
   primary: "white",
   secondary: "#1F2022",
-  tertiary: "#AAAFBA",
-  quartenary: "#D3D9E0",
+  tertiary: "#2fc7f5",
+  quartenary: "#2fc7f5",
 },{
-  primary: "Montserrat"
+  primary: "Montserrat",
+  secondary: "Helvetica"
 });
 
 export default class Presentation extends React.Component {
@@ -61,118 +62,19 @@ export default class Presentation extends React.Component {
         <Deck transition={["zoom", "slide"]} transitionDuration={500}>
           <Slide transition={["zoom"]} bgColor="primary">
             <Heading size={1} fit caps lineHeight={1} textColor="secondary">
-              Spectacle
+              Spectacle Boilerplate
             </Heading>
-            <Text margin="0px" textColor="secondary" size={1} fit bold caps>
-              A ReactJS Presentation Library
+            <Text margin="10px 0 0" textColor="tertiary" size={1} fit bold>
+              open the presentation/index.js file to get started
             </Text>
-            <Heading margin="5px 0px 0px" size={1} fit caps textColor="secondary">
-              Where You Can Write Your Decks In JSX
-            </Heading>
-            <Link href="https://github.com/FormidableLabs/spectacle">
-              <Text textSize="0.8em" bold margin="80px 0px 10px" textColor="tertiary">
-                View on Github
-              </Text>
-            </Link>
-            <Text textSize="0.6em" bold caps textColor="tertiary">
-              Hit Your Right Arrow To Begin!
-            </Text>
-          </Slide>
-          <Slide transition={["slide"]} bgColor="secondary" notes="You can even put notes on your slide. How awesome is that?">
-            <Image src={images.kat.replace("/", "")} margin="0px auto 40px" height="293px"/>
-            <Heading size={2} caps fit textColor="primary" textFont="primary">
-              Wait what?
-            </Heading>
-          </Slide>
-          <Slide transition={["zoom", "fade"]} bgColor="tertiary" notes="<ul><li>talk about that</li><li>and that</li></ul>">
-            <CodePane
-              lang="jsx"
-              source={require("raw!../assets/deck.example")}
-              margin="20px auto"
-            />
-          </Slide>
-          <Slide transition={["slide"]} bgImage={images.city.replace("/", "")} bgDarken={0.75}>
-            <Appear fid="1">
-              <Heading size={1} caps fit textColor="primary">
-                Full Width
-              </Heading>
-            </Appear>
-            <Appear fid="2">
-              <Heading size={1} caps fit textColor="tertiary">
-                Adjustable Darkness
-              </Heading>
-            </Appear>
-            <Appear fid="3">
-              <Heading size={1} caps fit textColor="primary">
-                Background Imagery
-              </Heading>
-            </Appear>
-          </Slide>
-          <Slide transition={["zoom", "fade"]} bgColor="tertiary">
-            <Heading margin="0px 0px 30px 0px" caps fit textColor="secondary">Flexible Layouts</Heading>
-            <Layout>
-              <Fill>
-                <Heading size={5} caps textColor="tertiary" bgColor="white" margin={10} padding={"10px 0px"}>
-                  Left
-                </Heading>
-              </Fill>
-              <Fill>
-                <Heading size={5} caps textColor="tertiary" bgColor="white" margin={10} padding={"10px 0px"}>
-                  Right
-                </Heading>
-              </Fill>
-            </Layout>
-          </Slide>
-          <Slide transition={["slide"]} bgColor="secondary">
-            <BlockQuote>
-              <Quote>Wonderfully formatted quotes</Quote>
-              <Cite>Ken Wheeler</Cite>
-            </BlockQuote>
-          </Slide>
-          <Slide transition={["spin", "zoom"]} bgColor="tertiary">
-            <Heading caps fit size={1} textColor="primary">
-              Inline Markdown
-            </Heading>
-            <Markdown>
-              {`
-![Markdown Logo](${images.markdown.replace("/", "")})
-
-You can write inline images, [Markdown Links](http://commonmark.org), paragraph text and most other markdown syntax
-* Lists too!
-* With ~~strikethrough~~ and _italic_
-* And lets not forget **bold**
-              `}
-            </Markdown>
-          </Slide>
-          <Slide transition={["slide", "spin"]} bgColor="primary">
-            <Heading caps fit size={1} textColor="tertiary">
-              Smooth
-            </Heading>
-            <Heading caps fit size={1} textColor="secondary">
-              Combinable Transitions
-            </Heading>
           </Slide>
           <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
+            <Heading size={2} caps textColor="tertiary">slide title</Heading>
             <List>
-              <Appear><ListItem>Inline style based theme system</ListItem></Appear>
-              <Appear><ListItem>Autofit text</ListItem></Appear>
-              <Appear><ListItem>Flexbox layout system</ListItem></Appear>
-              <Appear><ListItem>React-Router navigation</ListItem></Appear>
-              <Appear><ListItem>PDF export</ListItem></Appear>
-              <Appear><ListItem>And...</ListItem></Appear>
+              <ListItem>Item 1...</ListItem>
+              <ListItem>Item 2...</ListItem>
+              <ListItem>Item 3...</ListItem>
             </List>
-          </Slide>
-          <Slide transition={["slide"]} bgColor="primary">
-            <Heading size={1} caps fit textColor="tertiary">
-              Your presentations are interactive
-            </Heading>
-            <Interactive/>
-          </Slide>
-          <Slide transition={["spin", "slide"]} bgColor="primary">
-            <Heading size={1} fit lineHeight={1.5} textColor="tertiary">
-              Made with love in Seattle by
-            </Heading>
-            <Link href="http://www.formidablelabs.com"><Image width="100%" src={images.logo}/></Link>
           </Slide>
         </Deck>
       </Spectacle>

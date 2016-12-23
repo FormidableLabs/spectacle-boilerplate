@@ -19,3 +19,8 @@ Open a browser and hit [http://localhost:3000](http://localhost:3000), and we ar
 Building the dist version of the project is as easy as running `npm run build`
 
 If you want to deploy the slideshow to surge, run `npm run deploy`
+
+Click to deploy to Netlify
+
+<!-- Markdown snippet -->
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/FormidableLabs/spectacle-boilerplate)

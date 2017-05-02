@@ -26,10 +26,10 @@ require("spectacle/lib/themes/default/index.css");
 
 
 const images = {
-  city: require("../assets/city.jpg"),
-  kat: require("../assets/kat.png"),
-  logo: require("../assets/formidable-logo.svg"),
-  markdown: require("../assets/markdown.png")
+  city: require("../../assets/city.jpg"),
+  kat: require("../../assets/kat.png"),
+  logo: require("../../assets/formidable-logo.svg"),
+  markdown: require("../../assets/markdown.png")
 };
 
 preloader(images);
@@ -53,7 +53,7 @@ export default class Presentation extends React.Component {
             Spectacle Boilerplate
           </Heading>
           <Text margin="10px 0 0" textColor="tertiary" size={1} fit bold>
-            open the presentation/index.js file to get started
+            open the src/presentation/index.js file to get started
           </Text>
         </Slide>
         <Slide transition={["fade"]} bgColor="tertiary">

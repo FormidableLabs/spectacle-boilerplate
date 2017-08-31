@@ -1,0 +1,213 @@
+* {
+  box-sizing: inherit;
+}
+
+html, body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.spectacle-slide {
+  border: 1rem solid #000;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+/* Firefox */
+_:-moz-tree-row(hover), .spectacle-deck {
+  perspective: 1000px;
+}
+
+_:-moz-tree-row(hover), ul .appear {
+  display: inline;
+}
+
+.spectacle-slide em {
+  color: #a19e9d;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.spectacle-slide strong {
+  font-style: normal;
+  font-weight: bold;
+}
+
+a, a:link {
+  color: #c43a31 !important;
+  fill: #c43a31 !important;
+  transition: color 250ms ease-in, fill 250ms ease-in;
+}
+
+a:hover, a:focus {
+  color: rgba(36, 33, 33, 0.5) !important;
+  fill: rgba(36, 33, 33, 0.5) !important;
+  transition: color 400ms ease-out, fill 400ms ease-out;
+}
+
+.NoHover {
+  border-bottom: none !important;
+}
+
+.NoHover:hover {
+  border-bottom: none !important;
+}
+
+.LinkOnDark:hover {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.FullSlide {
+  position: absolute;
+  top: 25%;
+  transform: scale(1) translateY(-25%) !important;
+  left: 0;
+  bottom: 0;
+
+  max-width: none !important;
+  width: 100%;
+  max-height: none !important;
+  padding: 0 !important;
+}
+
+@keyframes animateFadeIn {
+  from { opacity:0; }
+  to { opacity:1; }
+}
+
+.fadeIn {
+  position: absolute;
+  top: -50%;
+  left: 0;
+  right: 0;
+
+  opacity: 0;
+  animation: animateFadeIn ease-in 0.1s;
+  animation-fill-mode: forwards;
+  animation-duration: 0.1s;
+  animation-delay: 2s;
+}
+
+/**
+ * prism.js tomorrow night eighties for JavaScript, CoffeeScript, CSS and HTML
+ * Based on https://github.com/chriskempson/tomorrow-theme
+ * @author Rose Pritchard
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #ccc;
+	font-family: 'Anonymous Pro', Inconsolata, Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.4;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #373534;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+}
+
+.token.comment,
+.token.block-comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #999;
+}
+
+.token.punctuation {
+	color: #ccc;
+}
+
+.token.tag,
+.token.attr-name,
+.token.namespace,
+.token.deleted {
+	color: #e2777a;
+}
+
+.token.function-name {
+	color: #6196cc;
+}
+
+.token.boolean,
+.token.number,
+.token.function {
+	color: #f08d49;
+}
+
+.token.property,
+.token.class-name,
+.token.constant,
+.token.symbol {
+	color: #f8c555;
+}
+
+.token.selector,
+.token.important,
+.token.atrule,
+.token.keyword,
+.token.builtin {
+	color: #cc99cd;
+}
+
+.token.string,
+.token.char,
+.token.attr-value,
+.token.regex,
+.token.variable {
+	color: #7ec699;
+}
+
+.token.operator,
+.token.entity,
+.token.url {
+	color: #67cdcc;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+
+.token.inserted {
+	color: green;
+}

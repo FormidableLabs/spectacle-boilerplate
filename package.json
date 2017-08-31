@@ -2,13 +2,14 @@
   "name": "spectacle-boilerplate",
   "version": "1.0.1",
   "description": "ReactJS Powered Presentation Framework",
-  "main": "lib/index.js",
+  "main": "dist/bundle.js",
   "scripts": {
-    "clean": "rimraf dist",
+    "prebuild": "npm run clean",
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.production.js",
+    "clean": "rimraf dist",
     "lint": "eslint --ext .js,.jsx .",
-    "deploy": "npm run clean & npm run build && surge -p .",
-    "start": "cross-env NODE_ENV=development node server.js"
+    "deploy": "npm run clean & npm run build && surge -p dist",
+    "start": "cross-env NODE_ENV=development webpack-dev-server --hot --port 3000 --content-base dist --config webpack.config.development.js"
   },
   "author": "",
   "license": "MIT",
@@ -44,19 +45,22 @@
     "express": "^4.13.3",
     "file-loader": "^0.9.0",
     "html-loader": "^0.4.0",
+    "html-webpack-plugin": "~2.28.0",
     "is-buffer": "^1.1.1",
     "markdown-loader": "^0.1.7",
     "node-libs-browser": "^0.5.3",
+    "object-assign": "~4.1.1",
+    "raw-loader": "^0.5.1",
     "react-transform-catch-errors": "^1.0.0",
     "react-transform-hmr": "^1.0.4",
     "redbox-react": "^1.2.0",
-    "raw-loader": "^0.5.1",
     "rimraf": "^2.4.4",
     "style-loader": "^0.13.0",
     "surge": "latest",
     "url-loader": "^0.5.6",
-    "webpack": "2.2.0",
+    "webpack": "~2.4.1",
     "webpack-dev-middleware": "^1.8.4",
+    "webpack-dev-server": "~2.4.5",
     "webpack-hot-middleware": "^2.13.0"
   }
 }

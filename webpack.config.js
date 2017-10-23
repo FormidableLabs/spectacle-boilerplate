@@ -4,20 +4,21 @@ var path = require("path");
 var webpack = require("webpack");
 
 module.exports = {
-  devtool: "source-map",
+  devtool: "eval",
   entry: [
-    "webpack-hot-middleware/client",
     "babel-polyfill",
+    'webpack-hot-middleware/client',
+    "react-hot-loader/patch",
     "./index"
   ],
   output: {
     path: path.join(__dirname, "dist"),
     filename: "bundle.js",
-    publicPath: "/dist/"
+    publicPath: "/dist",
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoEmitOnErrorsPlugin()
+    new webpack.NamedModulesPlugin(),
+    new webpack.HotModuleReplacementPlugin()
   ],
   module: {
     loaders: [{
@@ -27,23 +28,6 @@ module.exports = {
       test: /\.(js|jsx)$/,
       exclude: /node_modules/,
       loader: "babel-loader",
-      query: {
-        plugins: [
-          [
-            "react-transform", {
-              transforms: [{
-                transform: "react-transform-hmr",
-                imports: ["react"],
-                locals: ["module"]
-              }, {
-                transform: "react-transform-catch-errors",
-                imports: ["react", "redbox-react"]
-              }]
-            }
-          ]
-        ]
-      },
-      exclude: /node_modules/,
       include: __dirname
     }, {
       test: /\.css$/,

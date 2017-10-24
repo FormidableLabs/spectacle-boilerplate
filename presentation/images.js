@@ -13,9 +13,10 @@ const trimKeys = (obj) => Object.keys(obj)
 
 // have to use the /r/x form of RegExp here to make webpack happy
 const ctx = require.context("../assets", true, /\.(gif|svg|jpg|jpeg|tiff|png)$/);
+const images = trimKeys(dirCtxToObj(ctx));
 
 /**
- * Returns an object containing the imported images with trimmed key names
- * @return {Object} - Images object
- */
-export const getImages = () => trimKeys(dirCtxToObj(ctx));
+* Returns the object containing the imported images with trimmed key names
+* @return {Object} - Images object
+*/
+export const getImages = () => images;

@@ -14,25 +14,11 @@ import {
   Text
 } from "spectacle";
 
-// Import image preloader util
-import preloader from "spectacle/lib/utils/preloader";
-
 // Import theme
 import createTheme from "spectacle/lib/themes/default";
 
 // Require CSS
 require("normalize.css");
-require("spectacle/lib/themes/default/index.css");
-
-
-const images = {
-  city: require("../assets/city.jpg"),
-  kat: require("../assets/kat.png"),
-  logo: require("../assets/formidable-logo.svg"),
-  markdown: require("../assets/markdown.png")
-};
-
-preloader(images);
 
 const theme = createTheme({
   primary: "white",

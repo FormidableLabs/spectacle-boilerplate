@@ -8,6 +8,7 @@
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.production.js",
     "lint": "eslint --ext .js,.jsx .",
     "deploy": "npm run clean & npm run build && surge -p .",
+    "export": "spectacle-renderer --delay 3000",
     "start": "cross-env NODE_ENV=development node server.js"
   },
   "author": "",
@@ -16,7 +17,8 @@
     "normalize.css": "7.0.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
-    "spectacle": "^4.0.0"
+    "spectacle": "^4.0.0",
+    "spectacle-renderer": "^0.0.3"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

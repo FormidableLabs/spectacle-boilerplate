@@ -27,8 +27,11 @@ module.exports = {
     }, {
       test: /\.(js|jsx)$/,
       exclude: /node_modules/,
-      loader: "babel-loader",
-      include: __dirname
+      include: __dirname,
+      use: {
+        options: { cacheDirectory: true },
+        loader: "babel-loader",
+      }
     }, {
       test: /\.css$/,
       loaders: ["style-loader", "raw-loader"],

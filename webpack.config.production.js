@@ -4,6 +4,7 @@ var path = require("path");
 var webpack = require("webpack");
 
 module.exports = {
+  mode: "production",
   entry: [
     "babel-polyfill",
     "./index"
@@ -19,14 +20,12 @@ module.exports = {
         "NODE_ENV": JSON.stringify("production")
       }
     }),
-    new webpack.optimize.UglifyJsPlugin({
-      compressor: {
-        warnings: false
-      }
-    })
   ],
+  optimization: {
+    minimize: true
+  },
   module: {
-    loaders: [{
+    rules: [{
       test: /\.md$/,
       loader: "html-loader!markdown-loader?gfm=false"
     }, {

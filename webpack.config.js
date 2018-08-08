@@ -4,6 +4,7 @@ var path = require("path");
 var webpack = require("webpack");
 
 module.exports = {
+  mode: "development",
   devtool: "cheap-module-source-map",
   entry: [
     "babel-polyfill",
@@ -21,10 +22,18 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin()
   ],
   module: {
-    loaders: [{
+    rules: [{
       test: /\.md$/,
       loader: "html-loader!markdown-loader?gfm=false"
-    }, {
+    },
+    {
+      test: /\.mdx$/,
+      exclude: /node_modules/,
+      use: [
+        { loader: "babel-loader" },
+        { loader: require.resolve('./loader.js') }]
+    },
+    {
       test: /\.(js|jsx)$/,
       exclude: /node_modules/,
       loader: "babel-loader",

@@ -1,27 +1,26 @@
 {
   "presets": [
-    [ "es2015", { "loose": true, "modules" : false } ],
-    "stage-0",
-    "react"
+    "@babel/preset-env",
+    "@babel/preset-react"
   ],
   "plugins": [
     "react-hot-loader/babel",
-    "transform-decorators-legacy"
+    ["@babel/plugin-proposal-decorators", { "legacy": true }]
   ],
   "env": {
     "production": {
       "plugins": [
-        "transform-es2015-modules-commonjs",
+        ["@babel/plugin-transform-modules-commonjs"],
         "transform-react-remove-prop-types",
-        "transform-react-constant-elements",
-        "transform-react-inline-elements",
-        "transform-runtime",
-        "transform-decorators-legacy"
+        "@babel/plugin-transform-react-constant-elements",
+        "@babel/plugin-transform-react-inline-elements",
+        "@babel/plugin-transform-runtime",
+        ["@babel/plugin-proposal-decorators", { "legacy": true }]
       ]
     },
     "test": {
       "plugins": [
-        "transform-es2015-modules-commonjs"
+        "@babel/plugin-transform-modules-commonjs"
       ]
     }
   }

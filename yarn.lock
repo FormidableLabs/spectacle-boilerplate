@@ -7769,9 +7769,9 @@ spectacle-renderer@^0.0.3:
     puppeteer "^0.12.0"
     yargs "^9.0.1"
 
-spectacle@^5.2.0:
-  version "5.2.0"
-  resolved "https://registry.yarnpkg.com/spectacle/-/spectacle-5.2.0.tgz#0923041074bfb9149f9adc15b6bd5d623a164c22"
+spectacle@^5.2.1:
+  version "5.2.2"
+  resolved "https://registry.yarnpkg.com/spectacle/-/spectacle-5.2.2.tgz#b5e717c85db47fe5dd267ff6562b9463b24fc1bc"
   dependencies:
     deep-object-diff "^1.0.4"
     emotion "^8.0.8"

@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { Heading } from "spectacle";
+import React, { Component } from 'react';
+import { Heading } from 'spectacle';
 
 export default class Interactive extends Component {
   constructor() {
@@ -17,27 +17,32 @@ export default class Interactive extends Component {
   render() {
     const styles = {
       padding: 20,
-      background: "black",
+      background: 'black',
       minWidth: 300,
       marginTop: 20,
-      textTransform: "uppercase",
-      border: "none",
-      color: "white",
-      outline: "none",
-      fontWeight: "bold",
-      fontSize: "2em"
+      textTransform: 'uppercase',
+      border: 'none',
+      color: 'white',
+      outline: 'none',
+      fontWeight: 'bold',
+      fontSize: '2em'
     };
     return (
       <div>
-      {this.state.count < 5 ?
-        <div>
-          <Heading fit size={5} textColor="black">
-            The button has been clicked {this.state.count} times
+        {this.state.count < 5 ? (
+          <div>
+            <Heading fit size={5} textColor="black">
+              The button has been clicked {this.state.count} times
+            </Heading>
+            <button style={styles} type="button" onClick={this.handleClick}>
+              Click Me
+            </button>
+          </div>
+        ) : (
+          <Heading size={5} fit caps textColor="black">
+            Easy there pal
           </Heading>
-          <button style={styles} type="button" onClick={this.handleClick}>Click Me</button>
-        </div> :
-          <Heading size={5} fit caps textColor="black">Easy there pal</Heading>
-        }
+        )}
       </div>
     );
   }

@@ -4,14 +4,14 @@
   "description": "ReactJS Powered Presentation Framework",
   "main": "lib/index.js",
   "scripts": {
-    "clean": "rimraf dist",
     "build": "npm run clean & cross-env NODE_ENV=production webpack --config webpack.config.production.js",
-    "lint": "eslint --ext .js,.jsx .",
+    "clean": "rimraf dist",
     "deploy": "npm run build && surge -p .",
     "export": "spectacle-renderer --delay 3000",
+    "lint": "eslint --ext .js,.jsx .",
     "start": "cross-env NODE_ENV=development node server.js"
   },
-  "author": "",
+  "author": "Formidable Labs <hello@formidable.com> (https://formidable.com)",
   "license": "MIT",
   "dependencies": {
     "@babel/polyfill": "^7.0.0",
@@ -35,6 +35,7 @@
     "@babel/preset-react": "^7.0.0",
     "@babel/register": "^7.0.0",
     "@webpack-cli/migrate": "^0.1.2",
+    "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.4",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.18",
     "cross-env": "^5.2.0",
@@ -43,6 +44,7 @@
     "eslint-config-formidable": "^4.0.0",
     "eslint-plugin-filenames": "^1.3.2",
     "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-react": "^7.11.1",
     "express": "^4.16.3",
     "file-loader": "^2.0.0",

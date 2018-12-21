@@ -1,5 +1,5 @@
 // Import React
-import React, { Component } from 'react';
+import React from 'react';
 
 // Import Spectacle Core tags
 import {
@@ -7,8 +7,10 @@ import {
   Cite,
   Deck,
   Heading,
+  Image,
   List,
   ListItem,
+  Notes,
   Quote,
   Slide,
   Text
@@ -16,6 +18,11 @@ import {
 
 // Import theme
 import createTheme from 'spectacle/lib/themes/default';
+
+const images = {
+  formidagon: require('../assets/formidable-logo.svg'),
+  goodWork: require('../assets/good-work.gif')
+};
 
 // Require CSS
 require('normalize.css');
@@ -33,7 +40,7 @@ const theme = createTheme(
   }
 );
 
-export default class Presentation extends Component {
+export default class Presentation extends React.Component {
   render() {
     return (
       <Deck
@@ -48,6 +55,9 @@ export default class Presentation extends Component {
           <Text margin="10px 0 0" textColor="tertiary" fit bold>
             open the presentation/index.js file to get started
           </Text>
+        </Slide>
+        <Slide bgColor="secondary">
+          <Image src={images.formidagon} width={800} />
         </Slide>
         <Slide transition={['fade']} bgColor="tertiary">
           <Heading size={6} textColor="primary" caps>
@@ -86,8 +96,12 @@ export default class Presentation extends Component {
         <Slide transition={['fade']} bgColor="secondary" textColor="primary">
           <BlockQuote>
             <Quote>Example Quote</Quote>
-            <Cite>Author</Cite>
+            <Cite margin="10px 0 0 30px">Author</Cite>
           </BlockQuote>
+        </Slide>
+        <Slide>
+          <Image src={images.goodWork} width={500} />
+          <Notes>gifs work too</Notes>
         </Slide>
       </Deck>
     );

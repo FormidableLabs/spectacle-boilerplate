@@ -16,7 +16,7 @@ The Spectacle core API is available in the [Spectacle Docs](https://github.com/F
 1. Download the boilerplate
 
    ```sh
-   git clone git@github.com:Formidable.com/spectacle-boilerplate.git
+   git clone git@github.com:FormidableLabs/spectacle-boilerplate.git
    ```
 
 2. Remove existing version control

@@ -8,7 +8,7 @@
   "no-magic-numbers": 0
   "react/prefer-es6-class": 0
   "react/no-multi-comp": 0
-
+  "quotes": [2, "single"]
 "env":
   "browser": true,
   "node": true

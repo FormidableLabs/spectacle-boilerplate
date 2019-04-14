@@ -1,5 +1,9 @@
 # Spectacle Boilerplate
 
+### Maintenance Status: Active
+
+Formidable is actively working on this project, and we expect to continue for work for the foreseeable future. Bug reports, feature requests and pull requests are welcome. 
+
 ## Contents
 
 - [Reference](#reference)

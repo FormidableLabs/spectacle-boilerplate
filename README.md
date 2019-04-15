@@ -1,8 +1,6 @@
+[![Maintenance Status][maintenance-image]](#maintenance-status)
+
 # Spectacle Boilerplate
-
-### Maintenance Status: Active
-
-Formidable is actively working on this project, and we expect to continue for work for the foreseeable future. Bug reports, feature requests and pull requests are welcome. 
 
 ## Contents
 
@@ -58,3 +56,9 @@ If you want to deploy the slideshow to surge, run
 ```sh
 yarn deploy
 ```
+
+## Maintenance Status
+
+**Active:** Formidable is actively working on this project, and we expect to continue for work for the foreseeable future. Bug reports, feature requests and pull requests are welcome. 
+
+[maintenance-image]: https://img.shields.io/badge/maintenance-active-green.svg

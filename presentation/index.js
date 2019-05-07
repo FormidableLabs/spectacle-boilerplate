@@ -87,8 +87,8 @@ export default class Presentation extends React.Component {
             Standard List
           </Heading>
           <List>
-            <ListItem>Item 1</ListItem>
-            <ListItem>Item 2</ListItem>
+            <ListItem bulletStyle="star">Item 1</ListItem>
+            <ListItem bulletStyle="cross">Item 2</ListItem>
             <ListItem>Item 3</ListItem>
             <ListItem>Item 4</ListItem>
           </List>

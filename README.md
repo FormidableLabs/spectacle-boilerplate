@@ -1,64 +1,45 @@
-[![Maintenance Status][maintenance-image]](#maintenance-status)
+Spectacle Boilerplate
+=====================
 
-# Spectacle Boilerplate
+> ⚠️ **Deprecated**: This project has been deprecated. Please install [`spectacle-cli`](https://github.com/FormidableLabs/spectacle-cli) and use `spectacle-boilerplate` to generate your presentations with ease!
 
-## Contents
+## Generate a Spectacle presentation
 
-- [Reference](#reference)
-- [Getting Started](#getting-started)
-- [Tutorial](#tutorial)
-- [Build & Deployment](#build-deployment)
-
-## Reference
-
-The Spectacle core API is available in the [Spectacle Docs](https://github.com/FormidableLabs/spectacle/blob/master/README.md).
-
-## Getting Started
-
-1. Download the boilerplate
-
-   ```sh
-   git clone git@github.com:FormidableLabs/spectacle-boilerplate.git
-   ```
-
-2. Remove existing version control
-
-   ```sh
-   rm -R .git
-   ```
-
-3. Install dependencies
-
-   ```sh
-   yarn install
-   ```
-
-4. Start the webpack server. The server will run at [`localhost:3000`](http://localhost:3000).
-
-   ```sh
-   yarn start
-   ```
-
-## Tutorial
-
-If want you a step-by-step guide for getting started with Spectacle, a basic tutorial is available [here](https://github.com/FormidableLabs/spectacle/blob/master/docs/tutorial.md).
-
-## Build & Deployment
-
-Building the dist version of the project is as easy as running
+First, install `spectacle-cli`:
 
 ```sh
-yarn build
+$ npm install -g spectacle-cli
 ```
 
-If you want to deploy the slideshow to surge, run
+> ℹ️ **Note**: If you would like to avoid a global install, you can use `npx -p spectacle-cli spectacle-boilerplate` in the place of the `spectacle-boilerplate` command below.
+
+Then generate a new boilerplate Spectacle project!
 
 ```sh
-yarn deploy
+$ spectacle-boilerplate
+
+# ... or with options! ...
+$ spectacle-boilerplate \
+  --mode "js" \
+  --name "deck-o-awesomeness" \
+  --description "My fantastic Spectacle presentation" \
+  --dir "PATH/TO/NEW/DECK/DIRECTORY"
+
+# Check out the full usage
+$ spectacle-boilerplate -h
 ```
 
-## Maintenance Status
+## Author and build your project!
 
-**Active:** Formidable is actively working on this project, and we expect to continue for work for the foreseeable future. Bug reports, feature requests and pull requests are welcome. 
+See the [boilerplate guide](https://github.com/FormidableLabs/spectacle-cli/blob/master/lib/templates/boilerplate/README.md) for full instructions. As a quick starter:
 
-[maintenance-image]: https://img.shields.io/badge/maintenance-active-green.svg
+```sh
+# Install your dependencies
+$ yarn
+
+# Start development server at localhost:8080
+$ yarn start
+
+# Create a production build for publishing
+$ yarn build
+```
